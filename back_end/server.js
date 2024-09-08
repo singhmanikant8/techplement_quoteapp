@@ -1,6 +1,11 @@
 //creating own server
 const express = require("express");
+const cors = require('cors');
 const app = express();
+
+app.use(cors({
+    origin: 'https://techplement-quoteappfrontend.vercel.app', // Your frontend URL
+}));
 
 //load config from env file
 require("dotenv").config();
